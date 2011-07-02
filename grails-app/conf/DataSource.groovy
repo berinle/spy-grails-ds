@@ -15,7 +15,8 @@ environments {
     development {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:h2:mem:devDb"
+            //url = "jdbc:h2:mem:devDb"
+            jndiName = "jdbc/spyDB"
         }
     }
     test {
@@ -27,7 +28,8 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:prodDb"
+            //url = "jdbc:h2:prodDb"
+            jndiName = "jdbc/spyDB"
         }
     }
 }
